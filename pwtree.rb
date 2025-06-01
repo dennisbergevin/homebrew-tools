@@ -5,20 +5,20 @@
 class Pwtree < Formula
   desc ""
   homepage "https://github.com/dennisbergevin/homebrew-tools"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.1/pwtree_Darwin_x86_64.tar.gz"
-      sha256 "2e89d058d8ae6a4e0f194c38fcf22572cc983ff2c88d752822f5936aa70b157e"
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.2/pwtree_Darwin_x86_64.tar.gz"
+      sha256 "2a5f67bfe5c16f7d0802b3b3ac4e6edc64346d15fa7c7c8da103acd26e0fda3a"
 
       def install
         bin.install "pwtree"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.1/pwtree_Darwin_arm64.tar.gz"
-      sha256 "199eb1b1fe32e1fb039e1e9f31257f12d1e064843ddd40ae97da22e5615880d9"
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.2/pwtree_Darwin_arm64.tar.gz"
+      sha256 "50be27109584f9369be07b3aaa47ffc97572be1e8ad10fcbc800f27726d47a8c"
 
       def install
         bin.install "pwtree"
@@ -28,15 +28,15 @@ class Pwtree < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.1/pwtree_Linux_x86_64.tar.gz"
-      sha256 "27356b2fafd081ab802fcb78cba6e51c86338ad347ae5bfb6890acfd66d42de9"
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.2/pwtree_Linux_x86_64.tar.gz"
+      sha256 "6fa79359d26949f763bd74313962349833894391c1038caa97c401468db26edf"
       def install
         bin.install "pwtree"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.1/pwtree_Linux_arm64.tar.gz"
-      sha256 "b5b842968225e5dcb1549227a2762a0e4e189a1b99ad3b0f9c6e4c91d47528a9"
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.2/pwtree_Linux_arm64.tar.gz"
+      sha256 "c741de18447fb9f27aaea61d2d5131639e4de70be48f1631e1399e63858d0fdc"
       def install
         bin.install "pwtree"
       end
