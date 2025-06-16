@@ -5,20 +5,20 @@
 class Mash < Formula
   desc ""
   homepage "https://github.com/dennisbergevin/homebrew-tools"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.0/mash_Darwin_x86_64.tar.gz"
-      sha256 "5e004df4429202551981c9c2f478a1cc6ff9ede10fa7676ec186c159ebe8c7f3"
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.1/mash_Darwin_x86_64.tar.gz"
+      sha256 "1eed2610d0f8f747ef59d06b1a6da506de4765ace4da8529a3c3d40ca375dd8b"
 
       def install
         bin.install "mash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.0/mash_Darwin_arm64.tar.gz"
-      sha256 "1930f7f1210f4c96efd084182cff2aca0f726504c72076f08e48d1d22c3e6116"
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.1/mash_Darwin_arm64.tar.gz"
+      sha256 "2bec0090d2091210ddbbc375936850752a63cf7ebb3f47c4d17d4285e8b5312f"
 
       def install
         bin.install "mash"
@@ -28,15 +28,15 @@ class Mash < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.0/mash_Linux_x86_64.tar.gz"
-      sha256 "a3c8614ea62ec2d02e2542672151b8564c8058ee890106bc5f055013498abcf6"
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.1/mash_Linux_x86_64.tar.gz"
+      sha256 "f101998f7b7168afb27f7738475bc9dc5c1e4bec6f85aa691bee4848b06a3ab2"
       def install
         bin.install "mash"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.0/mash_Linux_arm64.tar.gz"
-      sha256 "104c0f05158aaf4f28a8ec9f7e327a9f2b58988066602b9d4eeac5177ee9bbf0"
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.1/mash_Linux_arm64.tar.gz"
+      sha256 "f4f4c5c97854c988dd9a46c3118d016974954e5009205af1bdb3ea04063e3320"
       def install
         bin.install "mash"
       end
