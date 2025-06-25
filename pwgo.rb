@@ -5,20 +5,20 @@
 class Pwgo < Formula
   desc ""
   homepage "https://github.com/dennisbergevin/homebrew-tools"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.1/pwgo_Darwin_x86_64.tar.gz"
-      sha256 "98e160e911dc59049592af4d252981c9099846479b4753dc3cce56121a4061e2"
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.2/pwgo_Darwin_x86_64.tar.gz"
+      sha256 "ce7f3b96496749a8ff64f2bbe2b2949cabd49b2702b7335389552f4c302b46e6"
 
       def install
         bin.install "pwgo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.1/pwgo_Darwin_arm64.tar.gz"
-      sha256 "93624b3672df4020bb36bfa177b2a120206b6effd7ae91ecfb64d07e3f446213"
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.2/pwgo_Darwin_arm64.tar.gz"
+      sha256 "dd398774790c910e690501d1dff1153f7d41c2e418ab4289e5815a66fe52375a"
 
       def install
         bin.install "pwgo"
@@ -28,15 +28,15 @@ class Pwgo < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.1/pwgo_Linux_x86_64.tar.gz"
-      sha256 "bffe9182a95e90df233c5a63b49f7740dc2c83eced16dfa8030dc60931034568"
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.2/pwgo_Linux_x86_64.tar.gz"
+      sha256 "a5024cce2db9a80c9a43aa77073614e8bd5c36fe881ae46bcb747c69cbf92191"
       def install
         bin.install "pwgo"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.1/pwgo_Linux_arm64.tar.gz"
-      sha256 "8fa602a936ced1b6d89c7bf3693c0121bdf423647be2c2b07252f44736f69a14"
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.2/pwgo_Linux_arm64.tar.gz"
+      sha256 "68d78f0320f4ddff88d34d274618f3fd8d3136f2c2b6d8728d944192de2fdbee"
       def install
         bin.install "pwgo"
       end
