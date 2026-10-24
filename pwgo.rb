@@ -5,39 +5,39 @@
 class Pwgo < Formula
   desc ""
   homepage "https://github.com/dennisbergevin/homebrew-tools"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.3/pwgo_Darwin_x86_64.tar.gz"
-      sha256 "15c747be4d350b97f3ed51ab92e8ae492300291e5e4b7aad3bb619d69332d62b"
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.4/pwgo_Darwin_x86_64.tar.gz"
+      sha256 "5607c93b304152a7b4bb96015662d34c46b2e885b09226df6a7e300723557fc7"
 
-      def install
+      define_method(:install) do
         bin.install "pwgo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.3/pwgo_Darwin_arm64.tar.gz"
-      sha256 "4c1f9a506b5a4eaa54e755728b8c9c963b438ff3301cb0d1fdac006b00c16372"
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.4/pwgo_Darwin_arm64.tar.gz"
+      sha256 "3421f5a18f23dddc144a23c9155b96a83efa1b45167e130f388129e556062985"
 
-      def install
+      define_method(:install) do
         bin.install "pwgo"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.3/pwgo_Linux_x86_64.tar.gz"
-      sha256 "d96bcd7b35f4ef68fc137437ec7b14398e355fa8e6b62e2d0aa86e7d3bba5191"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.4/pwgo_Linux_x86_64.tar.gz"
+      sha256 "de278128542584de7c299cebc5eaeac7fdc2a5ca1408bec28780ee7669ff1bc9"
+      define_method(:install) do
         bin.install "pwgo"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.3/pwgo_Linux_arm64.tar.gz"
-      sha256 "791ce6d7e1575718ef72586c94f5c48fe14788f6b826f595a716ab9064c9a488"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dennisbergevin/pwgo/releases/download/v0.1.4/pwgo_Linux_arm64.tar.gz"
+      sha256 "8274f125ac325dc8369d139e3399a12994847d3035ffd512d674c0c30aba10d2"
+      define_method(:install) do
         bin.install "pwgo"
       end
     end
