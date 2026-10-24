@@ -5,39 +5,39 @@
 class Mash < Formula
   desc ""
   homepage "https://github.com/dennisbergevin/homebrew-tools"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.3/mash_Darwin_x86_64.tar.gz"
-      sha256 "e093f3defcb706ea3c9b4e86914ec2927d86185469cb14ab277cfd396905dad6"
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.4/mash_Darwin_x86_64.tar.gz"
+      sha256 "9ccf5bcb9ed8450e364bb77af65deb09c74063d778a1655dbce115df18331dff"
 
-      def install
+      define_method(:install) do
         bin.install "mash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.3/mash_Darwin_arm64.tar.gz"
-      sha256 "6694d7a6b3dede77fa82f3331111e6353c1bc4f827eac32b0e885005c327ff09"
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.4/mash_Darwin_arm64.tar.gz"
+      sha256 "b6222e3f87d4e84a9ce7e9db911c65161ebc085213082392a982cf1ba0bb41d1"
 
-      def install
+      define_method(:install) do
         bin.install "mash"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.3/mash_Linux_x86_64.tar.gz"
-      sha256 "90f121c02c08d16eb3b6998e55d82f538ff0480c292abb8ca0877c3812a62826"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.4/mash_Linux_x86_64.tar.gz"
+      sha256 "6ae4714800f1b15080b43ffba9ec7d769c607aea4197d19174a861e0a2714a14"
+      define_method(:install) do
         bin.install "mash"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.3/mash_Linux_arm64.tar.gz"
-      sha256 "1a53138b5ee87c7de0fdb67cfa32f2fcf698ab98bfef056d4abb800917f18ac3"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dennisbergevin/mash/releases/download/v0.1.4/mash_Linux_arm64.tar.gz"
+      sha256 "fe8c749832981ff0d6040e78291d5a7d6e188073528c2027b782da23253e5fda"
+      define_method(:install) do
         bin.install "mash"
       end
     end
