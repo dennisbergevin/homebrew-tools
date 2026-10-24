@@ -5,39 +5,39 @@
 class Pwtree < Formula
   desc ""
   homepage "https://github.com/dennisbergevin/homebrew-tools"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.6/pwtree_Darwin_x86_64.tar.gz"
-      sha256 "40d09462c3178aaa5ca4aa8f51ec621b6572c54fb6869c5fd3d6f9a84dec922d"
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.7/pwtree_Darwin_x86_64.tar.gz"
+      sha256 "a244813f6d89206befda7423aee33aef1df3c1a23037f2f8f9dc1282900a35ed"
 
-      def install
+      define_method(:install) do
         bin.install "pwtree"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.6/pwtree_Darwin_arm64.tar.gz"
-      sha256 "6fe67652da951e1387ed43e5b6799b4b88c4fc8ea00d3092e1b874cc01be8bf8"
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.7/pwtree_Darwin_arm64.tar.gz"
+      sha256 "e3fbdb51f9750251fe9162f02b8d32fe51d2a86c2c505ff1192d40aadd2f20f3"
 
-      def install
+      define_method(:install) do
         bin.install "pwtree"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.6/pwtree_Linux_x86_64.tar.gz"
-      sha256 "387ddd36c5e2e2468eeffc1f737f7c8cd3174b416febcd61ee87f23f291cbb4b"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.7/pwtree_Linux_x86_64.tar.gz"
+      sha256 "3fbe0b35e143ddf10a34f980f9fc618d80e6436a7e715c70d6ab5017373eb319"
+      define_method(:install) do
         bin.install "pwtree"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.6/pwtree_Linux_arm64.tar.gz"
-      sha256 "d4844e03de342ec63b6b354775dd90641b165734a3ee4c63d41207dd75b7ea3a"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dennisbergevin/pwtree/releases/download/v0.1.7/pwtree_Linux_arm64.tar.gz"
+      sha256 "54f0429261aaddb345e8786d16e1a3d58858c9da6310132c2fd4568f49961471"
+      define_method(:install) do
         bin.install "pwtree"
       end
     end
